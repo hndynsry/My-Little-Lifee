@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Little Life</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <h2>♡ My Little Life</h2>
+    <span id="today"></span>
+</header>
+
+<div class="container">
+
+    <aside class="sidebar">
+        <h3>Ruang Pribadiku 🌷</h3>
+        <button class="nav-btn active" data-page="home">🏠 Beranda</button>
+        <button class="nav-btn" data-page="journal">📖 Catatan Harian</button>
+        <button class="nav-btn" data-page="schedule">📅 Jadwal Kegiatan</button>
+        <button class="nav-btn" data-page="memories">📸 Kenangan</button>
+        <button class="nav-btn" data-page="wallet">💰 Keuanganku</button>
+        <button class="nav-btn" data-page="goals">⭐ Impianku</button>
+    </aside>
+
+    <main class="content">
+
+        <section id="home" class="page active">
+            <div class="welcome">
+                <h1>Selamat Datang di My Little Life! 💙</h1>
+                <p>Tempat menyimpan cerita, kegiatan, dan kenangan sehari-hari.</p>
+            </div>
+
+            <div class="quote">
+                "Nikmati setiap hal kecil dalam kehidupan."
+                <br><small>Setiap hari adalah kesempatan baru ♡</small>
+            </div>
+
+            <h2>Kegiatan Sehari-hariku</h2>
+
+            <div class="cards">
+                <div class="card">📖<h3>Catatan Harian</h3>
+                    <p>Tuliskan ceritamu</p></div>
+                <div class="card">📅<h3>Jadwal</h3>
+                    <p>Atur kegiatanmu</p></div>
+                <div class="card">📸<h3>Kenangan</h3>
+                    <p>Simpan momen indah</p></div>
+                <div class="card">⭐<h3>Impian</h3>
+                    <p>Wujudkan cita-cita</p></div>
+            </div>
+
+            <div class="box">
+                <h2>Pengingat Hari Ini 🌸</h2>
+                <p>Jangan lupa bersyukur dan menghargai dirimu sendiri hari ini!</p>
+            </div>
+        </section>
+
+        <section id="journal" class="page">
+            <h1>Catatan Harianku 📖</h1>
+            <p>Tuliskan pengalaman dan perasaanmu hari ini.</p>
+
+            <textarea id="journalText"
+                placeholder="Hari ini aku merasa..."></textarea>
+
+            <button class="primary" id="saveJournal">Simpan Cerita ♡</button>
+            <h2>Kumpulan Ceritaku</h2>
+            <div id="journalList"></div>
+        </section>
+
+        <section id="schedule" class="page">
+            <h1>Jadwal Kegiatanku 📅</h1>
+            <p>Catat kegiatan yang ingin kamu lakukan.</p>
+
+            <input id="taskInput" placeholder="Tulis kegiatanmu...">
+            <button class="primary" id="addTask">Tambah Kegiatan +</button>
+            <ul id="taskList"></ul>
+        </section>
+
+        <section id="memories" class="page">
+            <h1>Kenanganku 📸</h1>
+            <p>Simpan momen dan hal-hal berharga dalam hidupmu.</p>
+
+            <input id="memoryInput" placeholder="Tuliskan kenanganmu...">
+            <button class="primary" id="addMemory">Simpan Kenangan ♡</button>
+            <div id="memoryList"></div>
+        </section>
+
+        <section id="wallet" class="page">
+            <h1>Keuanganku 💰</h1>
+            <p>Catat uang masuk dan pengeluaran sehari-hari.</p>
+
+            <div class="wallet-card">
+                <p>Total Saldo</p>
+                <h2 id="balance">Rp0</h2>
+            </div>
+
+            <input id="amount" type="number" placeholder="Masukkan jumlah uang (Rp)">
+            <input id="note" placeholder="Keterangan transaksi">
+
+            <select id="type">
+                <option value="in">Uang Masuk (+)</option>
+                <option value="out">Uang Keluar (-)</option>
+            </select>
+
+            <button class="primary" id="addMoney">Simpan Transaksi</button>
+            <h2>Riwayat Transaksi</h2>
+            <ul id="moneyList"></ul>
+        </section>
+
+        <section id="goals" class="page">
+            <h1>Impian dan Cita-citaku ⭐</h1>
+            <p>Tuliskan hal-hal yang ingin kamu capai.</p>
+
+            <input id="goalInput" placeholder="Apa impianmu?">
+            <button class="primary" id="addGoal">Tambah Impian +</button>
+            <ul id="goalList"></ul>
+        </section>
+
+    </main>
+</div>
+
+<footer>
+    Dibuat dengan ♡ | My Little Life 2026
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
