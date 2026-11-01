@@ -1,0 +1,257 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f0f7ff;
+    color: #40536d;
+}
+
+.navbar {
+    background: white;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    box-shadow: 0 2px 10px #dce9f5;
+}
+
+.navbar h2 {
+    color: #6c9bc9;
+}
+
+.container {
+    display: flex;
+    min-height: 85vh;
+}
+
+.sidebar {
+    width: 230px;
+    background: white;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sidebar h3 {
+    color: #6c9bc9;
+    margin-bottom: 15px;
+}
+
+.nav-btn {
+    border: none;
+    background: transparent;
+    text-align: left;
+    padding: 13px;
+    border-radius: 12px;
+    color: #526b85;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+    background: #e2f0ff;
+    color: #4b83b8;
+}
+
+.content {
+    flex: 1;
+    min-width: 0;
+    padding: 35px;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+h1 {
+    color: #6295c5;
+    margin-bottom: 12px;
+}
+
+h2 {
+    margin: 20px 0 12px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.welcome {
+    background: linear-gradient(120deg, #c8e4ff, #edf6ff);
+    padding: 35px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.quote {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    color: #6798c7;
+    margin-bottom: 25px;
+    line-height: 2;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.card, .box {
+    background: white;
+    padding: 22px;
+    border-radius: 16px;
+    box-shadow: 0 3px 12px #dceafa;
+}
+
+.card {
+    font-size: 24px;
+}
+
+.card h3 {
+    font-size: 17px;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 13px;
+}
+
+.box {
+    margin-top: 25px;
+}
+
+textarea, input, select {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border: 1px solid #cbdff2;
+    border-radius: 12px;
+    font-size: 15px;
+    outline: none;
+    background: white;
+    color: #40536d;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.primary {
+    background: #83b5e5;
+    color: white;
+    border: none;
+    padding: 13px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin: 8px 0;
+    font-weight: bold;
+}
+
+.primary:hover {
+    background: #659bd0;
+}
+
+#journalList, #memoryList {
+    margin-top: 20px;
+}
+
+.entry, li {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    margin: 10px 0;
+    list-style: none;
+    overflow-wrap: anywhere;
+}
+
+.entry small {
+    color: #91a7be;
+}
+
+.wallet-card {
+    background: linear-gradient(120deg, #8bbce9, #c5e2ff);
+    color: white;
+    padding: 25px;
+    border-radius: 18px;
+    margin: 20px 0;
+}
+
+.wallet-card h2 {
+    font-size: 30px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #85a7c8;
+}
+
+button {
+    font-family: inherit;
+}
+
+button:not(.nav-btn) {
+    cursor: pointer;
+}
+
+.entry button,
+li button {
+    border: none;
+    color: #5689bb;
+    background: #e8f3ff;
+    padding: 7px 12px;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .sidebar h3 {
+        width: 100%;
+    }
+
+    .nav-btn {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
